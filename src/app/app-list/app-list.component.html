@@ -1,0 +1,23 @@
+<div class="yourAppsTitle text-center">{{ title }}</div>
+
+  <div class="appListInnerContainer row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+
+      <div *ngFor="let eachAppData of data">
+
+        <div class="eachAppOuterContainer float-left text-center col-xs-12 col-sm-12 col-md-12 col-lg-3 col-xl-3">
+          <a [routerLink]="['/app_details', eachAppData._id ]">
+            <div class="eachAppContainer border-grey text-black border-radius-5-pixels">
+              <div  class="eachAppImageOuterContainer">
+                <img src="https://www.webwise.ie/wp-content/uploads/2017/12/Whatsapp.jpg">
+              </div>
+              <div class="eachAppName"> {{ eachAppData.name }} </div>
+              <div class="eachAppDateCreation">23/03/2017</div>
+            </div>
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </div>

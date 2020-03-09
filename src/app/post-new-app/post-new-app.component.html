@@ -1,0 +1,63 @@
+<div id="postAppPage" class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+      <form [formGroup]="form" id="postAppInnerContainer" class="form-container" onsubmit="return false;">
+        <div class="form-title text-center">Register your app</div>
+
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+          <label class="tagname col-xs-6 col-sm-6 col-md-12 col-lg-12 col-xl-12">Name</label>
+          <input name="name" formControlName="name" class="inputField col-xs-6 col-sm-6 col-md-12 col-lg-12 col-xl-12" type="text" required="true">
+          <span class="text-red" *ngIf="form.controls['name'].dirty && form.controls['name'].required">Please enter your Name.</span>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+          <label class="tagname col-xs-6 col-sm-6 col-md-12 col-lg-12 col-xl-12">Android URL</label>
+          <input name="androidUrl" formControlName="android_url" class="inputField col-xs-6 col-sm-6 col-md-12 col-lg-12 col-xl-12" type="text" required="true">
+          <span class="text-red" *ngIf="form.controls['android_url'].dirty && form.controls['android_url'].required">Please enter valid Android URL.</span>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+          <label class="tagname col-xs-6 col-sm-6 col-md-12 col-lg-12 col-xl-12">IOS URL</label>
+          <input name="iosUrl" formControlName="ios_url" class="inputField col-xs-6 col-sm-6 col-md-12 col-lg-12 col-xl-12" type="text" required="true">
+          <span class="text-red" *ngIf="form.controls['ios_url'].dirty && form.controls['ios_url'].required">Please enter valid IOS Url.</span>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+          <label class="tagname col-xs-6 col-sm-6 col-md-12 col-lg-12 col-xl-12">Version</label>
+          <input name="version" formControlName="version" class="inputField col-xs-6 col-sm-6 col-md-12 col-lg-12 col-xl-12" type="text" required="true">
+          <span class="text-red" *ngIf="form.controls['version'].dirty && form.controls['version'].required">Please enter app Version.</span>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+          <label class="tagname col-xs-6 col-sm-6 col-md-12 col-lg-12 col-xl-12">App logo</label>
+          <input name="appLogo" formControlName="app_logo" class="inputField col-xs-6 col-sm-6 col-md-12 col-lg-12 col-xl-12" type="text" required="true">
+          <span class="text-red" *ngIf="form.controls['app_logo'].dirty && form.controls['app_logo'].required">Please enter valid Logo.</span>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+          <label class="tagname col-xs-6 col-sm-6 col-md-12 col-lg-12 col-xl-12">Owner Name</label>
+          <input name="owner" formControlName="owner" class="inputField col-xs-6 col-sm-6 col-md-12 col-lg-12 col-xl-12" type="text" required="true">
+          <span class="text-red" *ngIf="form.controls['owner'].dirty && form.controls['owner'].required">Please enter Owner Name.</span>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+          <label class="tagname col-xs-6 col-sm-6 col-md-12 col-lg-12 col-xl-12">Phone</label>
+          <input name="phone" formControlName="phone" class="inputField col-xs-6 col-sm-6 col-md-12 col-lg-12 col-xl-12" type="number" required="true">
+          <span class="text-red" *ngIf="form.controls['phone'].dirty && form.controls['phone'].required">Please enter valid phone number.</span>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+          <label class="tagname col-xs-6 col-sm-6 col-md-12 col-lg-12 col-xl-12">Address</label>
+          <input name="companyAddress" formControlName="company_address" class="inputField col-xs-6 col-sm-6 col-md-12 col-lg-12 col-xl-12" type="text" required="true">
+          <span class="text-red" *ngIf="form.controls['company_address'].dirty && form.controls['company_address'].required">Please enter company address.</span>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+          <label class="tagname col-xs-6 col-sm-6 col-md-12 col-lg-12 col-xl-12">Target Age</label>
+          <input name="targetAge" formControlName="target_age" class="inputField col-xs-6 col-sm-6 col-md-12 col-lg-12 col-xl-12" type="number" required="true">
+          <span class="text-red" *ngIf="form.controls['target_age'].dirty && form.controls['target_age'].required">Please enter target age.</span>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+          <label class="tagname col-xs-6 col-sm-6 col-md-12 col-lg-12 col-xl-12">Target User</label>
+          <input name="targetUser" formControlName="target_user" class="inputField col-xs-6 col-sm-6 col-md-12 col-lg-12 col-xl-12" type="text" required="true">
+          <span class="text-red" *ngIf="form.controls['target_user'].dirty && form.controls['target_user'].required">Please enter target user.</span>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center">
+          <input (click)="appRegistration( $event )" class="inputSubmitField col-xs-6 col-sm-6 col-md-12 col-lg-12 col-xl-12 background-red text-white" type="submit" value="Submit">
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

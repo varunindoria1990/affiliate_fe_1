@@ -1,0 +1,61 @@
+<div id="app-analysis-details-page" class="container">
+  <div class="row">  
+   <!-- <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 p-5 text-left">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 py-2 float-left">
+      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 float-left">Number of Downloads</div>
+      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 float-left">{{ downloadDetails.number_of_downloads }}</div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 float-left py-2">
+      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 float-left">Ratings</div>
+      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 float-left">
+        <span> {{ downloadDetails.average_rating }} </span>
+        <span *ngFor="let key of downloadDetails.rating_list; let iterator = index">
+          <i *ngIf="isFilledStarToBeShown(downloadDetails.average_rating, iterator)" class="fa fa-star"></i>
+          <i *ngIf="!isFilledStarToBeShown(downloadDetails.average_rating, iterator)" class="fa fa-star-o"></i>
+        </span>        
+      </div>
+    </div>
+
+    <div *ngFor="let ratingList of downloadDetails.rating_list; let iterator = index" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 py-2 float-left border-bottom-grey">
+      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 float-left">{{ iterator + 1 }} Star</div>
+      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 float-left">{{ ratingList[iterator + 1] }}</div>
+    </div>
+    
+   </div> -->
+
+   <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 p-5 text-left">
+      <div class="float-left col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 p-4 text-center">
+        <div class="float-left col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 font-size-36-pixel"> {{ downloadDetails.average_rating }} </div>
+        <span *ngFor="let key of downloadDetails.rating_list; let iterator = index">
+          <i *ngIf="isFilledStarToBeShown(downloadDetails.average_rating, iterator)" class="fa fa-star"></i>
+          <i *ngIf="!isFilledStarToBeShown(downloadDetails.average_rating, iterator)" class="fa fa-star-o"></i>
+        </span>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 float-left">
+          <span class="fa fa-download"></span>
+          <span> {{ downloadDetails.number_of_downloads }} </span>
+        </div>
+      </div>
+      <div class="float-left col-xs-12 col-sm-12 col-md-8 col-lg-8 col-xl-8 px-2 py-4">
+        <div *ngFor="let ratingList of downloadDetails.rating_list; let iterator = index" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 py-2 float-left">
+          <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 col-xl-1 float-left">{{ iterator + 1 }}</div>
+          <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 col-xl-10 float-left" [ngStyle]="{'width': barWidth(iterator), 'background': backgroundColor(iterator), 'height': '25px' }"></div>
+        </div>
+      </div>
+   </div>
+
+   <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 p-5 text-left" *ngIf="reviewsList.length > 0">
+      <h3 class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">Reviews</h3>
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 border-bottom-grey float-left py-2" *ngFor="let eachReview of reviewsList">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 float-left">
+          <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 float-left px-0"> {{ eachReview.name }} </div>
+          <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 float-left"> {{ eachReview.average_rating }} </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 float-left">
+          {{ eachReview.comment }}
+        </div>
+      </div>
+   </div>
+
+  </div>
+ </div>
+ 

@@ -1,0 +1,19 @@
+<div id="subscribePage" class="float-left w-100">
+  <form class="w-75">
+    <div class="float-left col-xs-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 text-center">
+      <div class="float-left w-100">
+        <img class="walletImage" [src]="userAccountDetails.walletIcon" alt="Wallet">
+        <span>
+          Rs {{ userAccountDetails.amount }}
+        </span>
+      </div>
+      <div class="float-left w-100"> Your wallet balance </div>
+    </div>
+    <div class="float-left col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 text-center">
+      <input type="text" placeholder="Enter the amount" class="col-xs-12 col-sm-12 col-md-12 col-lg-10 col-xl-12 inputField margin-top-30-pixel" required="true">
+    </div>
+    <div class="float-left col-xs-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 text-center">
+      <input type="Submit" class="background-red text-white inputSubmitField margin-top-30-pixel">
+    </div>
+  </form>
+</div>

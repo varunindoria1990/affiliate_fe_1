@@ -1,0 +1,18 @@
+<div id="clent-home-page">
+  <div class="w-100 float-left">
+      <app-advertisement-banner>
+      </app-advertisement-banner>
+  </div>
+  <div class="float-left col-xs-12 col-sm-12 col-md-12 col-lg-9 col-xl-9 p-0">
+    <app-slider *ngFor="let eachSlider of sliderArray; index as componentIterator" [componentIterator]="componentIterator" [containerName]="eachSlider">
+    </app-slider>
+  </div>
+  <div class="w-25 float-left">
+    <!-- <app-advertisement>        
+    </app-advertisement> -->
+  </div>
+  <div class="float-left col-xs-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 p-0">
+    <app-review-earn-money [appsToBeReview]="appsToBeReview">
+    </app-review-earn-money>
+  </div>
+</div>

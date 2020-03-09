@@ -1,0 +1,34 @@
+<div id="setttingsPage" class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 float-left">
+        <div class="form-title text-center pb-4">Settings</div>
+
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 float-left py-2 pb-3">        
+          <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9 col-xl-9 float-left">
+            Inform you when application will be live 
+          </div>
+          <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 float-left text-center">  
+            <span class="border-grey background-white p-4" style="width: 100px;">
+              <span class="background-grey" style="width: 60px;"></span>
+              <i class="background-green"></i>
+            </span> 
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 float-left py-2 pb-3">        
+          <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9 col-xl-9 float-left">
+            Inform you 30 minutes prior when application will be live 
+          </div>
+          <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 float-left">            
+          </div>
+        </div>
+        
+        <div *ngFor="let eachSetting of settingsList" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 float-left border-bottom-grey py-2">
+          <span [routerLink]="eachSetting.link" class="cursor-pointer">
+            {{ eachSetting.name }}
+          </span>
+        </div>
+
+    </div>
+  </div>
+</div>

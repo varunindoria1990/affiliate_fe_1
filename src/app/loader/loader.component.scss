@@ -1,0 +1,17 @@
+#loader{
+    z-index: 10000;
+    @media all and (max-width: 1199px){
+        .spinner-container{
+            font-size: 50px;
+            left: 40%;
+            top: 40%;        
+        }
+    }
+    @media all and (min-width: 1199px){
+        .spinner-container{
+            font-size: 50px;
+            left: 47%;
+            top: 47%;        
+        }
+    }    
+}

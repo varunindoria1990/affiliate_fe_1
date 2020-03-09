@@ -1,0 +1,65 @@
+<div id="signUpPage" class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+      <form [formGroup]="form" id="signUpAppInnerContainer" class="form-container" onsubmit="return false;">
+
+        <div class="form-title text-center">Sign Up</div>
+
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+          <label class="tagname col-xs-6 col-sm-6 col-md-12 col-lg-12 col-xl-12">Owner Name</label>
+          <input name="name" formControlName="name" class="inputField col-xs-6 col-sm-6 col-md-12 col-lg-12 col-xl-12" type="text" required="true">
+          <span class="text-red" *ngIf="form.controls['name'].required">Please enter valid name.</span>
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+          <label class="tagname col-xs-6 col-sm-6 col-md-12 col-lg-12 col-xl-12">Application Name</label>
+          <input name="application_name" formControlName="application_name" class="inputField col-xs-6 col-sm-6 col-md-12 col-lg-12 col-xl-12" type="text" required="true">
+          <span class="text-red" *ngIf="form.controls['application_name'].required">Please enter application name.</span>
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+          <label class="tagname col-xs-6 col-sm-6 col-md-12 col-lg-12 col-xl-12">Official Email(Only)</label>
+          <input name="email" formControlName="email" class="inputField col-xs-6 col-sm-6 col-md-12 col-lg-12 col-xl-12" type="text" required="true">
+          <span class="text-red" *ngIf="form.controls['email'].required">Please enter email id.</span>
+          <span class="text-red" *ngIf="form.controls['email'].dirty && form.controls['email'].errors">Please enter valid email id.</span>
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+          <label class="tagname col-xs-6 col-sm-6 col-md-12 col-lg-12 col-xl-12">Phone(optional)</label>
+          <input name="phone" formControlName="phone" class="inputField col-xs-6 col-sm-6 col-md-12 col-lg-12 col-xl-12" type="number">
+          <span class="text-red" *ngIf="form.controls['phone'].required">Please enter valid phone number.</span>
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+          <label class="tagname col-xs-6 col-sm-6 col-md-12 col-lg-12 col-xl-12">Application link</label>
+          <input name="application_link" formControlName="application_link" class="inputField col-xs-6 col-sm-6 col-md-12 col-lg-12 col-xl-12" type="text" required="true">
+          <span class="text-red" *ngIf="form.controls['application_link'].required">Please enter valid application link.</span>
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+          <label class="tagname col-xs-6 col-sm-6 col-md-9 col-lg-9 col-xl-9">Which store you have your app</label>
+          <select name="app_store" formControlName="app_store" class="tagname col-xs-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 inputField">
+              <option>App store</option>
+              <option>Itunes</option>
+          </select>
+          <span class="text-red" *ngIf="form.controls['app_store'].required">Please select app store.</span>
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+          <label class="tagname col-xs-6 col-sm-6 col-md-12 col-lg-12 col-xl-12">Password</label>
+          <input name="password" formControlName="password" class="inputField col-xs-6 col-sm-6 col-md-12 col-lg-12 col-xl-12" type="password" required="true">
+          <span class="text-red" *ngIf="form.controls['password'].required">Please enter password.</span>
+        </div>
+
+        <div *ngIf="isErrorOccured" class="text-red text-center col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mt-1 float-left">
+          Something went wrong
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center">
+          <input (click)="submitSignUp()" class="inputSubmitField col-xs-6 col-sm-6 col-md-12 col-lg-12 col-xl-12 background-red text-white" type="Submit" value="Submit">
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>

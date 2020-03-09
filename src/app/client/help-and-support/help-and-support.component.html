@@ -1,0 +1,23 @@
+<div id="help-and-support-page" class="container">
+  <div class="row">  
+   <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">    
+     <form class="form-container ng-untouched ng-pristine ng-invalid" id="helpAndSupport" onsubmit="return false;">
+       <div class="form-title text-center">Help and Support</div>
+       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+         <label class="tagname col-xs-6 col-sm-6 col-md-12 col-lg-12 col-xl-12">Subject</label>
+         <input name="subject" formControlName="subject" class="inputField col-xs-6 col-sm-6 col-md-12 col-lg-12 col-xl-12" type="text" required="true">
+         <span class="text-red" *ngIf="form.controls['subject'].required">Please enter valid subject.</span>
+       </div>
+       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+         <label class="tagname col-xs-6 col-sm-6 col-md-12 col-lg-12 col-xl-12">Question</label>
+         <input name="question" formControlName="question" class="inputField col-xs-6 col-sm-6 col-md-12 col-lg-12 col-xl-12" type="text" required="true">
+         <span class="text-red" *ngIf="form.controls['question'].required">Please enter valid question.</span>
+       </div>
+       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center">
+         <input (click)="submitHelpAndSupport()" class="inputSubmitField col-xs-6 col-sm-6 col-md-12 col-lg-12 col-xl-12 background-red text-white" type="Submit" value="Submit">
+       </div>
+     </form>
+   </div>
+  </div>
+ </div>
+ 

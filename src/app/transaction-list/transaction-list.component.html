@@ -1,0 +1,31 @@
+<div id="transactionList" class="float-left w-100">  
+  <div id="transactionInnerList" class="float-left w-75">
+    <div class="float-left w-100">
+      <span class="p-1 cursor-pointer mr-1 selected-tab each-tab text-center float-left" (click)="selectTab($event)">Subscription Transaction List</span>
+      <span class="p-1 cursor-pointer each-tab text-center float-left"  (click)="selectTab($event)">Reviews Transaction List</span>
+    </div>
+    <div *ngIf="showTab" class="float-left w-100 each-tab-details">
+      <div class="float-left w-100 each-transaction border-bottom-grey p-3" *ngFor="let eachTransaction of transactionList">
+        <div class="float-left w-50 transaction-id-date">
+          <div class="float-left w-100 transaction-id"> {{ eachTransaction.transaction_id }} </div>
+          <div class="float-left w-100 transaction-date"> {{ eachTransaction.transaction_date }} {{ eachTransaction.transaction_time }} </div>
+        </div>
+        <div class="float-left w-50 transaction-amount">
+          <div class="float-left w-100 text-right">Rs {{ eachTransaction.transaction_amount }} </div>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="!showTab" class="float-left w-100 each-tab-details">
+        <div class="float-left w-100 each-transaction border-bottom-grey p-3" *ngFor="let eachTransaction of transactionList">
+          <div class="float-left w-50 transaction-id-date">
+            <div class="float-left w-100 transaction-id"> {{ eachTransaction.transaction_id }} </div>
+            <div class="float-left w-100 transaction-user-name"> {{ eachTransaction.transaction_user_name }} </div>
+            <div class="float-left w-100 transaction-date"> {{ eachTransaction.transaction_date }} {{ eachTransaction.transaction_time }} </div>
+          </div>
+          <div class="float-left w-50 transaction-amount">
+            <div class="float-left w-100 text-right">Rs {{ eachTransaction.transaction_amount }} </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>

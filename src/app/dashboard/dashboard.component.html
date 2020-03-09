@@ -1,0 +1,32 @@
+<div id="dashboardPage">
+  <div id="subscriptionList" class="float-left col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 my-5">
+    <table class="w-100 text-right">
+      <tr class="text-white background-red">
+        <th class="p-1"> Subscribe date </th>
+        <th class="p-1"> Subscribe time </th>
+        <th class="p-1"> Subscribe Amount </th>
+      </tr>
+      <tr class="border-bottom-grey" *ngFor="let subscribe of subscriptionList">
+        <td class="p-1"> {{ subscribe.subscription_date }} </td>
+        <td class="p-1"> {{ subscribe.subscription_time }} </td>
+        <td class="p-1"> {{ subscribe.subscription_amount }} </td>
+      </tr>
+    </table>
+  </div>
+  <div id="reviewsList" class="float-left col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 my-5">
+    <table class="w-100 text-right">
+      <tr class="text-white background-red">
+        <th class="p-1">Review Date</th>
+        <th class="p-1">Review Time</th>
+        <th class="p-1">Review Amount</th>
+        <th class="text-left p-1">Review Comment</th>
+      </tr>
+      <tr class="border-bottom-grey" *ngFor="let review of reviewsList">
+        <td class="p-1"> {{ review.review_date }} </td>
+        <td class="p-1"> {{ review.review_time }} </td>
+        <td class="p-1"> {{ review.review_amount }} </td>
+        <td class="text-left p-1"> {{ review.review_comment }} </td>
+      </tr>
+    </table>
+  </div>
+</div>

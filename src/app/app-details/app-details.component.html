@@ -1,0 +1,99 @@
+<!-- <div id="appDetails">
+
+
+  <div class="appDetailsInnerContainer row">
+    <div class="third-fifth-width margin-left-right-auto">
+      <div class="float-left col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 text-center">
+        <img src="https://www.webwise.ie/wp-content/uploads/2017/12/Whatsapp.jpg" class="complete-width padding-10-pixel">
+      </div>
+      <div class="float-left col-xs-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+        <div class="yourAppsTitle float-left- complete-width padding-10-pixel"> {{ completeAppDetails.name }} </div>
+        <div class="float-left- complete-width padding-10-pixel">Application rating  4.3 </div>
+        <div class="float-left- complete-width padding-10-pixel">Application Version {{ completeAppDetails.__v }}</div>
+        <div class="androidLink float-left- complete-width padding-10-pixel">
+            <a href="https://www-cdn.whatsapp.net/img/v4/whatsapp-logo.svg?v=46fe27fc8">
+              <span>
+               Go to Android Link
+              </span>
+            </a>
+        </div>
+        <div class="iosLink float-left- complete-width padding-10-pixel">
+          <a href="https://www-cdn.whatsapp.net/img/v4/whatsapp-logo.svg?v=46fe27fc8">
+            <span>
+              Go to IOS Link
+            </span>
+          </a>
+        </div>
+        <div class="float-left- complete-width padding-10-pixel">Total number of downloads: {{ completeAppDetails.downloads }}</div>
+        <div class="float-left- complete-width padding-10-pixel">Owner of the company: {{ completeAppDetails.owner }}</div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+
+<div id="appDetails" class="">
+  <div class="col-sm-12 col-xs-12 col-md-12 col-lg-12 col-xl-12 float-left mb-5 p-0">
+      <div class="float-left col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 pl-0 pr-0 text-center">
+        <img [attr.src]="completeAppDetails.appLogo" class="complete-width padding-10-pixel w-100">
+      </div>
+      <div class="float-left col-xs-12 col-sm-12 col-md-8 col-lg-8 col-xl-8 px-0">
+        <div class="font-size-36-pixel float-left col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+          {{ completeAppDetails.name }}
+        </div>
+        <div class="float-left col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+          {{ completeAppDetails.owner }}
+        </div>        
+        <div class="float-left col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+          App Version: {{ completeAppDetails.version }}
+        </div>
+        <div class="float-left col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+          Number of downloads: {{ completeAppDetails.downloads }}
+        </div>        
+        <div class="float-left col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+          <a [href]="completeAppDetails.androidUrl">
+            <span> Android Link </span>  
+          </a>          
+        </div>               
+        <div class="float-left col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+          <a [href]="completeAppDetails.iosUrl">
+            <span> IOS Link </span>            
+          </a>
+        </div>
+
+      </div>
+  </div>
+  <div class="col-sm-12 col-xs-12 col-md-12 col-lg-12 col-xl-12 float-left">
+    <div class="text-center float-left w-100 mb-4">
+      <span class="cursor-pointer background-red p-2 text-white border-radius-5-pixels" (click)="addQuestion()"> Add Questions </span>
+    </div>
+    <div id="question-to-be-added" class="w-100 float-left mb-4 d-none">
+      <form action="" class="w-100 float-left text-center" onsubmit="return false;">
+        <div class="w-100 float-left mb-2 text-left">
+          <span class="float-left w-100">Question </span>
+          <input id="question-field" type="text" required="true" class="float-left w-100 inputField" required="true">
+        </div>
+        <div class="w-100 float-left mb-2 text-left">
+          <span class="float-left w-100">Description </span>
+          <input id="description-field" type="text" required="true" class="float-left w-100 inputField" required="true">
+        </div>
+        <ol id="option-list" type="A" class="float-left w-100 text-left pl-3">
+          <li class="mb-2">
+            <input type="text" required="true" class="float-left inputField option-field" required="true">
+            <span class="fa fa-plus p-1 cursor-pointer mr-1 pt-2" (click)="addOption($event)"></span>
+            <!-- <span class="fa fa-minus p-1 cursor-pointer pt-2" (click)="removeOption($event)"></span> -->
+          </li>
+          <!-- <ng-template > -->
+            <li *ngFor="let eachOption of numberOfOptions" class="mb-2">
+              <input type="text" required="true" class="float-left inputField option-field" required="true">
+              <span class="fa fa-plus p-1 cursor-pointer mr-1 pt-2" (click)="addOption($event)"></span>
+              <span class="fa fa-minus p-1 cursor-pointer pt-2" (click)="removeOption($event)"></span>
+            </li>
+          <!-- </ng-template>           -->
+        </ol>
+        <input type="submit" value="Submit" class="background-red text-white border-radius-5-pixels inputSubmitField" (click)="postQuestion( $event )" >
+      </form>
+    </div>
+    <app-questions-list [data]="completeAppDetails['questions']"></app-questions-list>
+  </div>
+</div>

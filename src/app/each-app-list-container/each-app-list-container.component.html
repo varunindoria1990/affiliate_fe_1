@@ -1,0 +1,12 @@
+<div class="float-left w-100 eachAppContainer border-grey" *ngFor="let eachApp of appsToBeReview">
+  
+  <div class="float-left w-25 app-image" [style.background-image]="'url(' + eachApp.image + ')'">
+  </div>
+  <div class="float-left w-75 px-2">
+    <div class="float-left-w-100 font-weight-bold"> {{eachApp.name}} </div>
+    <div class="float-left-w-100"> {{eachApp.category}} </div>
+    <div class="float-left-w-100"> {{eachApp.number_of_reviews}} </div>
+    <div class="float-left-w-100 cursor-pointer font-size-12-pixel text-decoration"> Check the app/don't review </div>
+  </div>
+
+</div>
