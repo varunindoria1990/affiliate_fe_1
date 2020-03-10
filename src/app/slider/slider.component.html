@@ -1,0 +1,54 @@
+<!-- <div class="container sliderOuterContainer">
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center sliderTitle"> {{ containerName.name }} </div>
+
+  <div [id]=" 'carouselExampleControls' + componentIterator " class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner text-center">
+
+    <ng-container *ngFor="let eachData of containerName.data; index as iterator">
+
+      <div *ngIf="iterator == 0; else nextCarasor" class="carousel-item active" >
+        <img class="d-block w-100 sliding-image" [attr.src]="eachData.image" alt="First slide">
+        <span class="slidingElementTitle"> {{ eachData.name }} </span>
+      </div>
+
+      <ng-template #nextCarasor>
+        <div class="carousel-item" >
+          <img class="d-block w-100 sliding-image" [attr.src]="eachData.image" alt="Second slide">
+          <span class="slidingElementTitle"> {{ eachData.name }} </span>
+        </div>
+      </ng-template>
+
+    </ng-container>
+
+  </div>
+  <a class="carousel-control-prev leftSlider" [href]=" '#carouselExampleControls' + componentIterator " role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon leftSlidingArrow" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next rightSlider" [href]=" '#carouselExampleControls' + componentIterator " role="button" data-slide="next">
+    <span class="carousel-control-next-icon rightSlidingArrow" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+</div> -->
+
+
+<div class="w-100">
+  <div class="text-left sliderTitle float-left w-75"> {{ containerName.name }} </div>
+  <div class="text-right float-left w-25 pr-3 pt-3 pb-3 cursor-pointer seeAllButton"> See All </div>
+
+  <div class="float-left banner-container">
+
+    <ng-container *ngFor="let eachData of containerName.data; index as iterator">
+
+      <div *ngIf="iterator <= 4; else nextCarasor" class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 text-center d-inline-block width-200-pixels pl-0">
+        <img class="d-block w-100 app-image border-grey" [attr.src]="eachData.image" alt="First slide">
+        <span class="slidingElementTitle"> {{ eachData.name }} </span>
+      </div>
+
+    </ng-container>
+
+  </div>
+
+</div>

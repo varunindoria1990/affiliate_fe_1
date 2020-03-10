@@ -1,0 +1,135 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import 'custom_styles/styles';
+
+.width-10{
+  width: 10%;
+}
+.width-90{
+  width: 90%;
+}
+.border-radius-5-pixels{
+  border-radius: 5px;
+}
+.tagname{
+  margin-bottom: 0px;
+  margin-top: 10px;
+  padding-left: 0px;
+}
+.inputField{
+  border: 1px solid $grey-color;
+  border-radius: 4px;
+  padding: 3px 8px;
+}
+.inputSubmitField{
+  border: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  padding: 5px;
+  width: 120px;
+}
+.cursor-pointer{
+  cursor: pointer;
+}
+.background-red{
+  background-color: $red-color-text;
+}
+.background-green{
+  background-color: $green-color-text;
+}
+.background-white{
+  background-color: $white-color-text;
+}
+.background-grey{
+  background-color: $grey-color;
+}
+.text-white{
+  color: $white-color-text;
+}
+.text-red{
+  color: $red-color-text;
+}
+.text-green{
+  color: $green-color-text;
+}
+.text-black{
+  color: $black-color-text;
+}
+.text-grey{
+  color: $grey-color;
+}
+.border-grey{
+  border: 1px solid $grey-color;
+}
+.border-bottom-grey{
+  border-bottom: 1px solid $grey-color;
+}
+.grey-box-shadow{
+  box-shadow: 1px 1px 1px 1px $grey-color;
+}
+.grey-box-dark-shadow{
+  box-shadow: 1px 0px 6px 2px $grey-color;
+}
+.grey-box-bottom-shadow{
+  box-shadow: 0px -1px 1px 0px $grey-color;
+}
+.font-size-12-pixel{
+  font-size: 12px;
+}
+.font-size-36-pixel{
+  font-size: 36px;
+}
+.text-decoration{
+  text-decoration: underline;
+}
+.width-200-pixels{
+  width: 200px;
+}
+
+
+.form-title{
+  font-size: 20px;
+  margin: 15px 0px 0px 0px;
+}
+.form-container{
+  margin-left: auto;
+  margin-right: auto;
+}
+@media all and (max-width: 991px){
+  .form-container{
+    width: 100%;
+  }
+}
+@media all and (min-width: 992px){
+  .form-container{
+    width: 50%;
+  }
+}
+
+// @media all and (max-width: ){
+//   .displayNoneLargeScreen{
+//     display: none;
+//   }
+// }
+
+
+/* width */
+::-webkit-scrollbar {
+  height: 10px;
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

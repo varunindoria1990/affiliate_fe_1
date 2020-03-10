@@ -1,0 +1,46 @@
+<div class="modal fade" id="loginRegistrationModalCenter" tabindex="-1" role="dialog" aria-labelledby="loginRegistrationModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title pl-4" id="loginTitle">Login</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">          
+          <form [formGroup]="form" id="signInAppInnerContainer" (ngSubmit)="submitLoginForm()">      
+              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <label class="tagname col-xs-6 col-sm-6 col-md-12 col-lg-12 col-xl-12">Email</label>
+                <input name="email" formControlName="email" class="inputField col-xs-6 col-sm-6 col-md-12 col-lg-12 col-xl-12" type="email" required="true">
+                <span class="text-red" *ngIf="form.controls['email'].dirty && form.controls['email'].errors">Please enter valid email Id.</span>                
+              </div>
+      
+              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <label class="tagname col-xs-6 col-sm-6 col-md-12 col-lg-12 col-xl-12">Password</label>
+                <input name="password" formControlName="password" class="inputField col-xs-6 col-sm-6 col-md-12 col-lg-12 col-xl-12" type="password" required="true">
+                <span class="text-red" *ngIf="form.controls['password'].dirty && form.controls['password'].errors">Minimum 8 characters required.</span>
+              </div>
+
+              <div *ngIf="isErrorOccured" class="text-red text-center col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mt-1 float-left">
+                Something went wrong
+              </div>
+      
+              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center">
+                <input [disabled]="!form.valid" class="inputSubmitField col-xs-6 col-sm-6 col-md-12 col-lg-12 col-xl-12 background-red text-white" type="Submit" value="Submit">
+              </div>
+
+              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 pt-2 text-center">
+                <a routerLink="/signup_user">
+                  <span class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 text-black">User Registration</span>
+                </a>
+              </div>
+              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 pt-2 text-center">
+                <a routerLink="/signup_client">
+                  <span class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 text-black">Client Registration</span>
+                </a>
+              </div>      
+          </form>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+<div id="affiliate-page">
+  <div class="w-100 float-left">
+    <app-advertisement-banner>
+    </app-advertisement-banner>
+  </div>
+  <div class="w-100 float-left">
+    <app-slider *ngFor="let eachSlider of sliderArray; index as componentIterator" [componentIterator]="componentIterator" [containerName]="eachSlider">
+    </app-slider>
+  </div>
+  <!-- <div class="w-75 float-left">
+    <app-slider *ngFor="let eachSlider of sliderArray; index as componentIterator" [componentIterator]="componentIterator" [containerName]="eachSlider">
+    </app-slider>
+  </div>
+  <div class="w-25 float-left">
+      <app-advertisement>        
+      </app-advertisement>
+  </div> -->
+</div>

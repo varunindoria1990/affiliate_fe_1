@@ -1,0 +1,99 @@
+<div id="sidebarButton" class="fa fa-bars d-lg-none cursor-pointer float-left" (click)="toggleSideOverlayPopup()">
+</div>
+
+
+<div id="navigationOverlayPopup" class="d-none">
+  <div class="overlayContainer">
+    <div class="popupContainer">
+      <div class="eachNavigationLink col-xs-12 col-sm-12 col-md-12 col-lg-12 p-2" (click)="openCategoriesContainer()">
+        <span class="fa fa-list-alt p-2"></span>
+        <span> Categories </span>
+      </div>                   
+      <div class="eachNavigationLink col-xs-12 col-sm-12 col-md-12 col-lg-12 p-2 logged-out-state" data-toggle="modal" data-target="#loginRegistrationModalCenter" type="">
+        <span class="fa fa-power-off p-2"></span>
+        <span> Login </span> 
+      </div>
+
+      <a routerLink="/user_home" class="logged-in-state text-black" (click)="toggleSideOverlayPopup()">
+        <div class="eachNavigationLink col-xs-12 col-sm-12 col-md-12 col-lg-12 p-2">
+          <span class="fa fa-home p-2"></span>
+          <span> Home </span> 
+        </div>
+      </a>
+      <a routerLink="/subscribe" class="logged-in-state text-black" (click)="toggleSideOverlayPopup()">
+        <div class="eachNavigationLink col-xs-12 col-sm-12 col-md-12 col-lg-12 p-2">
+          <span class="fa fa-dollar p-2"></span>
+          <span> Subscribe </span> 
+        </div>
+      </a>
+      <a routerLink="/transactions" class="logged-in-state text-black" (click)="toggleSideOverlayPopup()">
+        <div class="eachNavigationLink col-xs-12 col-sm-12 col-md-12 col-lg-12 p-2">
+          <span class="fa fa-star p-2"></span>
+          <span> Transactions </span> 
+        </div>
+      </a>
+      <a routerLink="/dashboard" class="logged-in-state text-black" (click)="toggleSideOverlayPopup()">
+        <div class="eachNavigationLink col-xs-12 col-sm-12 col-md-12 col-lg-12 p-2">
+          <span class="fa fa-bar-chart p-2"></span>
+          <span> Dashboard </span> 
+        </div>
+      </a>
+      <a routerLink="/apps" class="logged-in-state text-black" (click)="toggleSideOverlayPopup()">
+        <div class="eachNavigationLink col-xs-12 col-sm-12 col-md-12 col-lg-12 p-2">
+          <span class="fa fa-list p-2"></span>
+          <span> App List </span> 
+        </div>
+      </a>
+      <a routerLink="/postapp" class="logged-in-state text-black" (click)="toggleSideOverlayPopup()">
+        <div routerLink="/postapp" class="eachNavigationLink col-xs-12 col-sm-12 col-md-12 col-lg-12 p-2">
+          <span class="fa fa-upload p-2"></span>
+          <span> Post App </span>
+        </div>
+      </a>
+      <div class="eachNavigationLink col-xs-12 col-sm-12 col-md-12 col-lg-12 p-2 logged-in-state" (click)="signOutUser();">
+        <span class="fa fa-power-off p-2"></span>
+        <span> Log Out </span> 
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="d-none category-list-smalldevice-container col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 background-white grey-box-dark-shadow text-black">
+    <div id="backbutton-upper-header-outer-container">  
+      <div id="backbutton-upper-header" class="row background-white">
+        <div id="back-button" class="cursor-pointer fa fa-arrow-left float-left" (click)="closeCategoriesContainer()"></div>
+        <div class="navbar-header image-outer-container col-xs-2 col-sm-2 col-md-2 col-lg-2 col-xl-2">
+            <img class="cursor-pointer" src="https://www.navcdn.net/wp-content/themes/nav-2015/dist/images/nav-logo-2018.svg">
+        </div>
+      </div>
+    </div>
+
+    <div class="w-100 float-left text-left mb-4 text-center">
+      <span class="w-100 float-left border-bottom-grey p-2" (click)="closeCategoriesContainer()" *ngFor="let eachCategory of categoryList[0]['key'] ">
+        {{ eachCategory }}
+      </span>
+    </div>
+    <div class="w-100 float-left text-left mb-4 text-center">
+      <span class="w-100 float-left border-bottom-grey p-2" (click)="closeCategoriesContainer()" *ngFor="let eachCategory of categoryList[1]['key'] ">
+        {{ eachCategory }}
+      </span>
+    </div>
+    <div class="w-100 float-left text-left mb-4 text-center">
+      <span class="w-100 float-left border-bottom-grey p-2" (click)="closeCategoriesContainer()" *ngFor="let eachCategory of categoryList[2]['key'] ">
+        {{ eachCategory }}
+      </span>
+    </div>
+</div>
+
+<div class="navbar-header image-outer-container col-xs-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 float-left">
+  <a routerLink="/">
+    <img class="cursor-pointer" src="https://www.navcdn.net/wp-content/themes/nav-2015/dist/images/nav-logo-2018.svg">
+  </a>
+</div>
+<div *ngIf="!isSearchPage" id="search-button" class="fa fa-search d-lg-none cursor-pointer float-right" (click)="appSearch()">
+</div>
+<!-- <div *ngIf="isSearchPage">
+    <input type="text">
+    <button>Search</button>
+</div> -->

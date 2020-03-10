@@ -1,0 +1,10 @@
+<div *ngFor="let eachData of data; index as iterator" class="each-question-answer pl-2 p-1 mb-3 float-left w-100">
+  <div>
+    {{ iterator + 1 }}. {{ eachData["text"] }}
+  </div>
+  <ol type="A">
+    <li *ngFor="let eachOption of eachData['options']">
+      {{ eachOption }}
+    </li>
+  </ol>
+</div>

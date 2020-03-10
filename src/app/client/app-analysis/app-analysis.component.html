@@ -1,0 +1,19 @@
+<div id="app-analysis-page" class="container">
+  <div class="row">  
+   <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 p-5">    
+    <table class="w-100 text-right">
+      <tr class="text-white background-red">
+        <th class="p-1 text-left"> App Name </th>
+        <th class="p-1"> Version </th>
+        <th class="p-1"> Release date </th>
+      </tr>
+      <tr class="border-bottom-grey" *ngFor="let eachApp of appList">
+        <td (click)="goToRating( eachApp.app_id )" class="p-1 text-left"> {{ eachApp.app_name }} </td>
+        <td class="p-1"> {{ eachApp.app_version }} </td>
+        <td class="p-1"> {{ eachApp.app_release_date }} </td>
+      </tr>
+    </table>
+   </div>
+  </div>
+ </div>
+ 

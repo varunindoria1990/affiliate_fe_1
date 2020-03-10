@@ -1,0 +1,7 @@
+<div id="appsList">
+  <div id="searchFieldsContainer" class="float-left text-center w-100 position-relative px-1 d-lg-none">
+    <input type="text" class="float-left w-100 border-radius-5-pixels border-grey p-1" [(ngModel)]="searchInputField" name="searchInputField" (keydown.enter)="searchApp()">
+    <span class="fa fa-times float-left position-absolute cursor-pointer" (click)="clearSearchField()"></span>
+  </div>
+  <apps-list [title]="title" [data]="completeAppListData"></apps-list>
+</div>

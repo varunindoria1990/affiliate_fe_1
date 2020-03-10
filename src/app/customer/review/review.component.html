@@ -1,0 +1,39 @@
+<div id="reviewPage" class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+        <form id="reviewInnerContainer" class="form-container" onsubmit="return false;">
+          <div class="form-title text-center">Review</div>
+          
+          <div *ngFor="let eachData of questionList; index as iterator" class="each-question-answer col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 border-bottom-grey py-1">
+            <div>
+              {{ iterator + 1 }}. {{ eachData["text"] }}
+            </div>
+            <ol class="position-relative" type="A">
+              <li *ngFor="let eachOption of eachData['options']">
+                <input type="radio" class="position-absolute answer-selection" [name]="iterator">
+                {{ eachOption }}
+              </li>
+            </ol>
+          </div>
+
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <label class="tagname col-xs-6 col-sm-6 col-md-12 col-lg-12 col-xl-12">Suggestions</label>
+            <input name="suggestions" class="inputField col-xs-6 col-sm-6 col-md-12 col-lg-12 col-xl-12" type="text" required="true">
+            <!-- <span class="text-red" *ngIf="form.controls['Suggestions'].dirty && form.controls['Suggestions'].required">Please enter valid suggestions.</span> -->
+          </div>
+
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <label class="tagname col-xs-6 col-sm-6 col-md-12 col-lg-12 col-xl-12">App Experience</label>
+            <div class="col-xs-6 col-sm-6 col-md-12 col-lg-12 col-xl-12 text-center">
+                <span *ngFor="let eachRating of ratingList" [attr.rating]="eachRating.ratingValue" [class]="eachRating.class" (click)="ratingClick(eachRating.ratingValue)"></span>
+            </div>
+          </div>
+
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center">
+            <input class="inputSubmitField col-xs-6 col-sm-6 col-md-12 col-lg-12 col-xl-12 background-red text-white" type="submit" value="Submit">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  

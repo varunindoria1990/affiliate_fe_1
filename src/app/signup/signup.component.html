@@ -1,0 +1,30 @@
+<div id="signUpPage" class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+      <form id="signUpAppInnerContainer" onsubmit="return false;">
+
+        <div class="signUpAppTitle text-center">Sign Up</div>
+
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+          <label class="tagname col-xs-6 col-sm-6 col-md-12 col-lg-12 col-xl-12">Name</label>
+          <input name="name" class="inputField col-xs-6 col-sm-6 col-md-12 col-lg-12 col-xl-12" type="text" required="true">
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+          <label class="tagname col-xs-6 col-sm-6 col-md-12 col-lg-12 col-xl-12">Email</label>
+          <input name="email" class="inputField col-xs-6 col-sm-6 col-md-12 col-lg-12 col-xl-12" type="email" required="true">
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+          <label class="tagname col-xs-6 col-sm-6 col-md-12 col-lg-12 col-xl-12">Password</label>
+          <input name="password" class="inputField col-xs-6 col-sm-6 col-md-12 col-lg-12 col-xl-12" type="password" required="true">
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center">
+          <input (click)="submitSignUp()" class="inputSubmitField col-xs-6 col-sm-6 col-md-12 col-lg-12 col-xl-12" type="Submit" value="Submit">
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>

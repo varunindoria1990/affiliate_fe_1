@@ -1,0 +1,89 @@
+#header-masterhead{
+  // background-color: #ffffff;
+  float: left;
+  height: 60px;
+  margin: 0px;
+  max-width: 100%;
+  padding: 0px;
+  width: 100%;
+  z-index: 10;
+}
+#header-masterhead-inner-container{
+  // background-color: #ffffff;
+  // box-shadow: 1px 1px 1px 1px #9e9e9e9e;
+  float: left;
+  // height: 60px;
+  margin: 0px;
+  position: fixed;
+  padding: 13px 5px;
+  top: 0px;
+  width: 100%;
+  z-index: 10;
+}
+
+.searchInputFields{
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  // border: 1px solid #e2e2e2;  
+  height: 30px;
+  margin-top: -5px;
+}
+.category-list-container{
+  // background-color: #ffffff;  
+  border-radius: 3px;
+  // box-shadow: 1px 0px 6px 2px #e2e2e2;  
+  // color: #333333;
+  cursor: default;
+  max-width: 500px;
+  padding: 10px 0px;
+  position: absolute;
+  right: 160px;
+  top: 30px;
+  width: 500px;
+  z-index: 10000;
+}
+.category-list-container span{
+  cursor: pointer;
+  float: left;
+  width: 100%;
+}
+.category-list-container span:hover{
+  color: #9e9e9e;
+}
+#category-container:hover .category-list-container{
+  display: block !important;
+}
+
+.header-links-container{
+  margin-left: 0px;
+  margin-right: 0px;
+  padding: 0px;
+  width: 560px;
+}
+.top-navigation-each-link{
+  // color: #007bff;
+  cursor: pointer;
+  min-width: 70px;
+  padding: 5px;
+}
+// .show-user-login-logout-container{
+//   background-color: #dddddd5c;
+// }
+.header-links-inner-container{
+  float: right;
+}
+span.each-navigation-button{
+  float: left;
+  // min-width: 80px;
+  padding: 0px 9px;
+}
+.logged-out-state .fa{
+  font-size: 20px;
+  margin-left: 8px;
+}
+
+
+
+
+
+

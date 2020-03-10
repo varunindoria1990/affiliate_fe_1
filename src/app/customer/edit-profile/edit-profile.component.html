@@ -1,0 +1,58 @@
+<div id="editProfilePage" class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+      <form [formGroup]="form" id="editProfileInnerContainer" class="form-container" onsubmit="return false;">
+        <div class="form-title text-center">Edit Profile</div>
+
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+          <label class="tagname col-xs-6 col-sm-6 col-md-12 col-lg-12 col-xl-12">Name</label>
+          <input name="name" formControlName="name" class="inputField col-xs-6 col-sm-6 col-md-12 col-lg-12 col-xl-12" type="text" required="true">
+          <span class="text-red" *ngIf="form.controls['name'].dirty && form.controls['name'].required">Please enter your Name.</span>
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+          <label class="tagname col-xs-6 col-sm-6 col-md-12 col-lg-12 col-xl-12">Phone Number</label>
+          <input name="phone" formControlName="phone" class="inputField col-xs-6 col-sm-6 col-md-12 col-lg-12 col-xl-12" type="text" required="true">
+          <span class="text-red" *ngIf="form.controls['phone'].dirty && form.controls['phone'].required">Please enter your valid phone number.</span>
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+          <label class="tagname col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">Gender</label>
+          <select formControlName="gender" name="gender" class="tagname col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 inputField">
+            <option>Male</option>
+            <option>Female</option>
+          </select>
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+          <label class="tagname col-xs-6 col-sm-6 col-md-12 col-lg-12 col-xl-12">Email</label>
+          <input name="email" formControlName="email" class="inputField col-xs-6 col-sm-6 col-md-12 col-lg-12 col-xl-12" type="text" required="true">
+          <span class="text-red" *ngIf="form.controls['email'].dirty && form.controls['email'].required">Please enter valid email id.</span>
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+          <label class="tagname col-xs-6 col-sm-6 col-md-12 col-lg-12 col-xl-12">Current Password</label>
+          <input name="current_password" formControlName="current_password" class="inputField col-xs-6 col-sm-6 col-md-12 col-lg-12 col-xl-12" type="password" required="true">
+          <span class="text-red" *ngIf="form.controls['current_password'].dirty && form.controls['current_password'].required">Please enter current password.</span>
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+          <label class="tagname col-xs-6 col-sm-6 col-md-12 col-lg-12 col-xl-12">New Password</label>
+          <input name="new_password" formControlName="new_password" class="inputField col-xs-6 col-sm-6 col-md-12 col-lg-12 col-xl-12" type="password" required="true">
+          <span class="text-red" *ngIf="form.controls['new_password'].dirty && form.controls['new_password'].required">Please enter new password.</span>
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+          <label class="tagname col-xs-6 col-sm-6 col-md-12 col-lg-12 col-xl-12">Confirmm Password</label>
+          <input name="confirm_password" formControlName="confirm_password" class="inputField col-xs-6 col-sm-6 col-md-12 col-lg-12 col-xl-12" type="password" required="true">
+          <span class="text-red" *ngIf="form.controls['confirm_password'].dirty && form.controls['confirm_password'].required">Please enter confirm password.</span>
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center">
+          <input (click)="editProfile( $event )" class="inputSubmitField col-xs-6 col-sm-6 col-md-12 col-lg-12 col-xl-12 background-red text-white" type="submit" value="Submit">
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>

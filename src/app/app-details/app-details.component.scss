@@ -1,0 +1,42 @@
+// #appDetails{
+//   float: left;
+//   max-width: 100%;
+//   width: 100%;
+// }
+// .third-fifth-width{
+//   width: 60%;
+// }
+// .complete-width{
+//   width: 100%;
+// }
+// .float-left{
+//   float: left;
+// }
+// .margin-left-right-auto{
+//   margin-left: auto;
+//   margin-right: auto;
+// }
+// .padding-10-pixel{
+//   padding: 10px;
+// }
+
+@media all and (min-width: 991px){
+    #appDetails {
+        background-color: #ffffff;
+        border: 1px solid #e2e2e2;
+        box-shadow: 1px 6px 6px 2px #9e9e9e;
+        float: left;        
+        margin: 35px 15%;
+        padding: 15px;
+        width: 70%;
+    }
+    #question-to-be-added {
+        form{
+            margin: 0px 15%;
+            width: 70% !important;
+        }
+    }
+}
+.option-field {
+    width: 70%;
+}

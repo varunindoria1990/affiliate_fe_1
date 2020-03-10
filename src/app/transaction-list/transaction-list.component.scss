@@ -1,0 +1,17 @@
+#transactionInnerList{
+    box-shadow: 0px 1px 3px 2px #e2e2e2;
+    float: left;
+    margin: 40px 12.5% !important;
+    .each-tab{
+        // width: 220px;
+    }
+    .selected-tab{
+        border-bottom: 3px solid #212529;
+    }
+    .each-transaction{
+        .transaction-amount {
+            line-height: 3;
+            color: #e5212d;
+        }
+    }
+}
