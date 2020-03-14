@@ -1,6 +1,9 @@
 {
   "name": "sachin-varun-project",
   "version": "0.0.0",
+  "engines": {
+    "node": "8.11.3"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
