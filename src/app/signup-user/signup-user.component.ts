@@ -40,7 +40,11 @@ export class SignupUserComponent implements OnInit {
   isErrorOccured: boolean = false;
 
   ngOnInit() {
-    
+    this.hideLoginOverlayPopup();
+  }
+
+  hideLoginOverlayPopup() {
+    (document.querySelector("#loginRegistrationModalCenter .close") as HTMLElement).click();
   }
 
   submitSignUpUser(){

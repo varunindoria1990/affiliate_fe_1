@@ -89,13 +89,13 @@ const routes: Routes = [
   },
   { 
     path: "signup_user", 
-    component: SignupUserComponent,
-    canActivate: [AuthGuardService]
+    component: SignupUserComponent
+    // canActivate: [AuthGuardService]
   },
   { 
     path: "signup_client", 
-    component: SignupClientComponent,
-    canActivate: [AuthGuardService]
+    component: SignupClientComponent
+    // canActivate: [AuthGuardService]
   },
   { 
     path: "apps", 

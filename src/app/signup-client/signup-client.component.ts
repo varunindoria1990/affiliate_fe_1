@@ -47,8 +47,13 @@ export class SignupClientComponent implements OnInit {
   });
 
   ngOnInit() {
+    this.hideLoginOverlayPopup();
   }
 
+  hideLoginOverlayPopup() {
+    (document.querySelector("#loginRegistrationModalCenter .close") as HTMLElement).click();
+  }
+  
   submitSignUp(){
     var iterator,
         numberOfInputFields,
