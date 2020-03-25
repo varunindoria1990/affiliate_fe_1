@@ -1,3 +1,6 @@
 <div id="appsList">
-  <apps-list [title]="title" [data]="completeAppListData"></apps-list>
+  <apps-list *ngIf="completeAppListData.length > 0" [title]="title" [data]="completeAppListData"></apps-list>
+  <div *ngIf="appStatusMessage.length > 0" class="text-center pt-5 font-size-24-pixel appStatusMessage">
+    {{ appStatusMessage }}
+  </div>
 </div>

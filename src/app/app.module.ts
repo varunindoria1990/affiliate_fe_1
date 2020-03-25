@@ -44,6 +44,7 @@ import { LoaderComponent } from './loader/loader.component';
 import { ErrorPageComponent } from './error-page/error-page.component';
 import { ClientModule } from './client/client.module';
 import { CustomerModule } from './customer/customer.module';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -88,6 +89,7 @@ import { CustomerModule } from './customer/customer.module';
     ReactiveFormsModule,
     FormsModule,
     ClientModule,
+    RouterModule,
     CustomerModule
   ],
   providers: [],

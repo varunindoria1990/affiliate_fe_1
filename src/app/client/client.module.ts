@@ -10,6 +10,7 @@ import { GetReviewUploadAppComponent } from '../get-review-upload-app/get-review
 import { HelpAndSupportComponent } from './help-and-support/help-and-support.component';
 import { AppAnalysisComponent } from './app-analysis/app-analysis.component';
 import { AppAnalysisDetailsComponent } from './app-analysis-details/app-analysis-details.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { AppAnalysisDetailsComponent } from './app-analysis-details/app-analysis
     AppAnalysisDetailsComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ],
   exports: [
     HomeComponent, 

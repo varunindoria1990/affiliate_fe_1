@@ -1,5 +1,9 @@
 #appsList{
   float: left;
+  height: calc( 100vh );
   max-width: 100%;
   width: 100%;
+  .appStatusMessage{
+    line-height: calc( 50vh );
+  }
 }
